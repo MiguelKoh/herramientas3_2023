@@ -17,10 +17,9 @@ with st.sidebar:
     pais = st.selectbox("paises",listaPaises)
     #st.write(pais)
 
-
-    datosPais = df.query("country == '"+pais+"'")
-    fig = px.bar(datosPais, x='year', y='pop')
-    st.plotly_chart(fig,use_container_width=True)
+datosPais = df.query("country == '"+pais+"'")
+fig = px.bar(datosPais, x='year', y='pop')
+st.plotly_chart(fig,use_container_width=True)
     #fig.show()
 
 
